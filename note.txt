@@ -1,0 +1,43 @@
+#1 Pendahuluan
+-Mvc => Model View Controller
+-Mvc definisi sederhananya adalah => Pola arsitektur pada perancangan perangkat lunak berorientasi objek
+-tujuan mvc adalah => Memisahkan antara tampilan, data dan proses.
+-Model(data) => <= Controller(proses) => <= View(tampilan)
+-Model itu isinya yang berkaitan sama database
+-View itu yang di tampilin ke user
+-Controller itu kayak logic nya misal dari user(view) mau login. kalo mau login apa yang di lakuin? jadi nanti disitu akan ada logic. misal logic nya validasi form. kalo masuk akal nanti controller lempar ke modal
+-Kenapa Mvc?
+*Organisasi dan Struktur Kode
+*Pemisahan logic dan tampilan
+*Perawatan Kode
+*Implementasi konsep OOP yang sudah dipelajari
+*Digunakan oleh banyak Web Application Framework
+-Caching => digunakan agar aplikasi nya tambah cepet, kalo misalnya halaman tersebut sudah pernah diakses oleh user,data tersebut sudah pernah dikirim oleh user, proses nya gak perlu dilakuin secara penuh. langsung aja dikirim ke caching nya 
+#2 Persiapan
+-pertama tama bikin folder public => menyimpan file file yang bisa di akses oleh user
+-folder App => menyimpan folder dan file file utama dari aplikasi mvc kita
+-folder core => inti dari mvc nya ada di dalam sini
+-folder views => antarmuka yang akan disajikan oleh controller ini
+-folder controllers => semua controller nanti akan masuk ke dalam folder ini
+-folder routes => Menghubungkan URL yang diminta dengan controller atau fungsi tertentu
+-home => 
+#3 Routing
+-.htaccess => blok user akses ke app 
+*Htaccess merupakan singkatan dari “hypertext access” 
+*htaccess adalah file teks sederhana dalam format ASCII yang digunakan untuk konfigurasi permalink dan pengaturan tertentu pada web server Apache. File ini biasanya digunakan untuk mengubah pengaturan default dari Apache.
+*
+*disini kalian bisa tulis konfigurasi server untuk folder app
+*Options -Multiviews => untuk menghindari kesalahan atau ambigu ketika memanggil folder atau file di dalam public ini
+*Options -Indexes => Perintah ini memberi tahu server Apache untuk memblokir direktori listing. 
+#4 Controller
+-params itu ternyata parameter
+#5 View
+#6 Asset
+#7 Model
+-Mode => bisnis logic
+-PDO => PHP DATA OBJECT
+#8 DATABASE WRAPPER
+-kita akan bikin class database yang nantinya bisa dipakek oleh semua model nya
+-DATABASE WRAPPER atau pembungkus dari database
+#9 INSERT DATA
+-
