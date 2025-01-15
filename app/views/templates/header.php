@@ -6,6 +6,8 @@
     <title>Halaman <?= $data['judul'] ?></title>
     <!-- arahin nya gabisa pake ../ bisa nya absolute Url -->
     <link href="<?= BASEURL ?>/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <!-- Import jQuery dari CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
 

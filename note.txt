@@ -40,4 +40,8 @@
 -kita akan bikin class database yang nantinya bisa dipakek oleh semua model nya
 -DATABASE WRAPPER atau pembungkus dari database
 #9 INSERT DATA
--
+#10
+#11
+#12 UPDATE DATA (+ajax)
+-jQuery adalah perpustakaan JavaScript yang digunakan untuk mempermudah pengembangan website dan aplikasi. jQuery dirancang untuk menyederhanakan proses scripting di sisi klien. 
+-jQuery memiliki beberapa fitur, di antaranya: Manipulasi HTML/DOM, Animasi dan efek, Ajax, HTML event methods, CSS3 compliant. 

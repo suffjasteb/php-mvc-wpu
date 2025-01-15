@@ -12,7 +12,7 @@
     <div class="col-lg-6">
         <!-- modal itu elemen yang akan muncul ketika kita triger menggunakan tombol biasanya -->
         <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
+<button type="button" class="btn btn-primary tombolTambahData" data-bs-toggle="modal" data-bs-target="#formModal">
   Tambah data Mahasiswa
 </button>
 <br><br>
@@ -21,6 +21,7 @@
         <?php foreach($data['mhs'] as $mhs) : ?>
   <li class="list-group-item"><?= $mhs['nama'] ?> 
   <a href="<?= BASEURL ?>/mahasiswa/detail/<?= $mhs['id'] ?>" class="badge text-bg-primary float-end">detail</a>
+  <a href="<?= BASEURL ?>/mahasiswa/edit/<?= $mhs['id'] ?>" class="badge text-bg-success float-end me-2 tampilModalEdit"  data-bs-toggle="modal"  data-bs-target="#formModal" data-id="<?= $mhs['id'] ?>">edit</a>
   <a href="<?= BASEURL ?>/mahasiswa/delete/<?= $mhs['id'] ?>" class="badge text-bg-danger float-right float-end me-2" onclick="return confirm(' <?= $mhs['nama'] ?> akan di hapus ?')">delete</a></li>
   <?php endforeach; ?>
 </ul>
@@ -34,12 +35,13 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="judulModal">Tambah Data Mahasiswa</h1>
+        <h1 class="modal-title fs-5" id="formModalLabel">Tambah Data Mahasiswa</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <!-- form -->
         <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="post">
+          <input type="hidden" name="id" id="id">
             <!-- nama -->
        <div class="mb-3">
        <label for="nama" class="form-label">Nama</label>
@@ -59,8 +61,8 @@
        </div>
 
        <!-- jurusan -->
+       <label for="jurusan">jurusan</label>
  <select class="form-select" aria-label="Default select example" id="jurusan" name="jurusan">
-  <option selected>Jurusan</option>
   <option value="teknik informatika">Teknik Informatika</option>
   <option value="hukum">hukum</option>
   <option value="pertanian">pertanian</option>

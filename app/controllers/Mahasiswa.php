@@ -48,4 +48,26 @@ class Mahasiswa extends Controller{
     }
 
     
+
+// saat saya jalankan ajax nya saya jalankan method ini lalu saya minta data nya ke model
+public function getedit() {
+    // json_encode => The json_encode() function is used to encode a value to JSON format.
+   echo json_encode($this->model('Mahasiswa_model')->getMahasiswaById($_POST['id']));
+}
+
+public function edit() {
+    if ($this->model('Mahasiswa_model')->editDataMahasiswa($_POST) > 0) {
+        Flasher::setFlash('berhasil', 'diedit', 'success');
+        // redirect
+        header('Location: ' . BASEURL . '/mahasiswa');
+        exit;
+    }
+    else {
+        Flasher::setFlash('gagal', 'diedit', 'danger');
+        // redirect
+        header('Location: ' . BASEURL . '/mahasiswa');
+        exit;
+    }
+}
+
 }

@@ -94,4 +94,24 @@ class Mahasiswa_model {
             // cek apakah ada baris yang terpengaruh
             return $this->db->rowCount();
         }
+
+        public function editDataMahasiswa($data) {
+            $query = "UPDATE mahasiswa
+            SET nama = :nama, nrp = :nrp, email = :email, jurusan = :jurusan
+            WHERE id = :id";
+
+            // kita jalanin query nya
+            $this->db->query($query);
+            // kita bind
+            $this->db->bind('nama', $data['nama']);
+            $this->db->bind('nrp', $data['nrp']);
+            $this->db->bind('email', $data['email']);
+            $this->db->bind('jurusan', $data['jurusan']);
+            $this->db->bind('id', $data['id']);
+
+            $this->db->execute();
+
+            return $this->db->rowCount();
+            
+        }
 }
